@@ -61,11 +61,11 @@ Qls = np.einsum('PQ,Qls->Pls', metric, Qls_tilde)
 
 # Coulomb matrix
 chiP = np.einsum('Pls,ls->P', Qls, D)
-Jp = np.einsum('Pmn,P->mn', Qls, chiP)
+Jp = np.einsum('Pnm,P->mn', Qls, chiP)
 
 print("J is correct: %s" % np.allclose(Jp, J_ref))
 
-print(Jp-J_ref)
+#print(Jp-J_ref)
 
 
 print(Jp.min())
