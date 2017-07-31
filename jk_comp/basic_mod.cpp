@@ -143,6 +143,8 @@ py::array_t<double> einJ(py::array_t<double> A,
         }
 	    }
 	    C_data[i*C_ncols +j] = val;
+        }
+        }
 
 //    for(size_t j=0; j< C_ncols; j++){
 	

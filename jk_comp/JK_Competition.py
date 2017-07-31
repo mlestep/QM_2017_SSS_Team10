@@ -27,11 +27,11 @@ D = (D + D.T) / 2
 
 # Reference
 #J_ref = np.einsum("pqrs,rs->pq", I, D)
-J_ref = bm.einJ(I, D)
+J_ref = np.einsum("pqrs,rs->pq", I, D)
 K_ref = np.einsum("prqs,rs->pq", I, D)
 
 # Your implementation
-J = np.random.rand(nbf, nbf)
+J = bm.einJ(I, D)
 K = np.random.rand(nbf, nbf)
 
 # Make sure your implementation is correct
